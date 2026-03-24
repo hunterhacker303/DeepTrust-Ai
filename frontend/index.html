@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepTrust</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>DeepTrust</h1>
+        <p>Verify suspicious media instantly</p>
+
+        <input type="file" id="fileInput">
+        <button onclick="uploadFile()">Analyze</button>
+
+        <div id="loading" class="hidden">Analyzing...</div>
+
+        <div id="result" class="hidden">
+            <h2>Result</h2>
+            <p><strong>Verdict:</strong> <span id="verdict"></span></p>
+            <p><strong>Trust Score:</strong> <span id="trust"></span></p>
+            <p><strong>Fake Probability:</strong> <span id="prob"></span></p>
+
+            <h3>Reasons:</h3>
+            <ul id="reasons"></ul>
+
+            <h3>AI Explanation:</h3>
+            <p id="ai"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
